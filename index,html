@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- ..............................CSS STARTING HERE....................................... -->
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body{
+    font-family: sans-serif;
+}
+
+header{
+    background: #00a78e;
+}
+.navWrapper{
+    width: 100%;
+    position: sticky;
+    z-index: 2;
+    background: #00a78e;
+    top: 0;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    width: 75%;
+    margin: auto;
+}
+
+.logo a{
+    text-decoration: none;
+}
+.logo span:nth-child(1){
+    font-size: 40px;
+    font-weight: 900;
+
+}
+
+.logo span:nth-child(2){
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.logoLetter{
+    display: inline-flex;
+    border: 7px solid #fff;
+    height: 50px;
+    width: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 10px 0;
+    margin: 0 0 0 40px;
+    text-transform: uppercase;
+}
+.hero{
+    padding: 20px 0;
+    width: 100%;
+}
+
+.container{
+    width: 75%;
+    margin:20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 40px 40px 40px;
+    /* border: 1px solid #AAA; */
+    background: rgb(158 225 219 / 25%);
+    
+}
+.text h1, .text h2{
+    color: rgb(255, 255, 255);
+}
+
+.hi span {
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 900;
+}
+
+.hi{
+    position: relative;
+    display: flex;
+    width: 80px;
+    height: 40px;
+    background: #03caab;
+    text-align: center;
+    box-shadow: -1px 7px 6px 0px #365a55;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    background: #03caab;
+    position: absolute;
+    transform: rotate3d(1, 1, 1, 45deg);
+    top: 25px;
+    left: 5px;
+}
+
+.image img{
+    width: 300px;
+    border-radius: 5px;
+}
+.text{
+    text-transform: uppercase;
+    line-height: 2.5;
+    font-family: sans-serif;
+
+}
+#hed{
+    border-bottom: 1px solid #fff;
+    display: block;
+    padding-bottom: 10px;
+    color: #fff;
+    font-weight: 900;
+}
+
+.name{
+    margin: 30px 0;
+    line-height: 2;
+}
+.title1, .title2, .title3, .title4{
+    color: #fff;
+    font-weight: 600;
+    /* margin-right: 40px; */
+}
+
+.title1{
+    margin-right: 62px;
+}
+
+.title2{
+    margin-right: 73px;
+}
+.title3{
+    margin-right: 64px;
+}
+
+.title4{
+    margin-right: 32px;
+}
+
+.desc{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    /* margin-left: 30px; */
+}
+
+#service{
+    background: #1b242f;
+}
+
+.box1{
+    width: 20%;
+    height: 1px;
+    border: 1px solid #00a78e;
+    margin: 20px auto 10px auto;
+    background: #00a78e;
+}
+.box2{
+    width: 10%;
+    height: 1px;
+    border: 1px solid #00a78e;
+    margin: 10px auto 10px auto;
+    background: #00a78e;
+}
+.hed2{
+    text-align: center;
+    color: #00a78e;
+    font-size: 30px;
+    padding-top: 30px;
+}
+
+.serviceListWrapper{
+    padding: 100px 0;
+}
+.serviceList{
+    width: 75%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.next{
+    width: 40%;
+    display: flex;
+}
+
+.next h1{
+    color: #00a78e;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.next p{
+    color: #AAA;
+    font-family: 'Font Awesome 5 Pro';
+}
+i.fas.fa-pen-square, i.fas.fa-cogs, i.fas.fa-mobile, i.fas.fa-phone-square-alt  {
+    font-size: 50px;
+    margin-right: 50px;
+    color: #00a78e;
+}
+.responsive{
+    width: 40%;
+    display: flex;
+    margin-top: 70px;
+}
+
+.responsive h1{
+    color: #00a78e;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.responsive p{
+    color: #AAA;
+    font-family: 'Font Awesome 5 Pro';
+}
+
+
+
+.moboleFriendly{
+    width: 40%;
+    display: flex;
+    margin-top: 70px;
+}
+
+.moboleFriendly h1{
+    color: #00a78e;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.moboleFriendly p{
+    color: #AAA;
+    font-family: 'Font Awesome 5 Pro';
+}
+
+.communication{
+    width: 40%;
+    display: flex;
+    margin-top: 70px;
+}
+
+.communication h1{
+    color: #00a78e;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.communication p{
+    color: #AAA;
+    font-family: 'Font Awesome 5 Pro';
+}
+
+i.fas.fa-align-right {
+    position: absolute;
+    font-size: 35px;
+    color: #fff;
+    top: 40px;
+    right: 40px;
+}
+    .bar{
+        display: none;
+        cursor: pointer;
+    }
+
+@media only screen and (max-width: 900px) {
+    .bar{
+        display: block;
+        z-index: 2;
+    }
+    .navbar{
+        position: fixed;
+        background: #333;
+        top: 0px;
+        right: -300px;
+        height: 100vh;
+        transition: 0.5s;
+        overflow: auto;
+        width: 300px;
+        
+    }
+    .navbar ul li{
+        width: 80%;
+        margin: 50px 0px 50px 30px;
+        /* padding-left: 60px; */
+    }
+    .navbar ul li a{
+        margin: 0;
+        width: 100%;
+    }
+    .navbar ul{
+        display: flex;
+        flex-flow: column;
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+/*..........................nav bar done....................*/
+
+    .title4{
+        display: block;
+    }
+
+    .text{
+        width: 200px;
+    }
+
+     .serviceList{
+         flex-flow: column;
+         width: 100%;
+     }
+
+     .next, .responsive, .moboleFriendly, .communication{
+         width: 75%;
+         flex-flow: column;
+         align-items: center;
+         justify-content: center;
+     }
+
+     .next h1, .responsive h1, .moboleFriendly h1, .communication h1{
+         text-align: center;
+         margin-top: 40px;
+     }
+
+     .image img{
+        width: 200px;
+       
+    }
+
+}
+
+
+@media only screen and (max-width:1400px) {
+    /* .image img{
+        width: 200px;
+    } */
+}
+
+
+@media only screen and (max-width: 1250px) {
+ .title3{
+    display: block;
+ }
+}
+
+@media only screen and (max-width:700px) {
+    .container{
+        flex-flow: column-reverse;
+    }  
+    
+    .image img{
+        margin-bottom: 30px;
+    }
+}
+    </style>
+    <!-- ..............................CSS END HERE............................................ -->
+    <script src="https://kit.fontawesome.com/0f4ea50e51.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="navWrapper">
+            <nav>
+                <div class="logo">
+                   <a href="#"> <div class="logoLetter">
+                        <span>A</span>
+                    </div>
+                    <span>st</span></a>
+                    <!-- <img src="logo2.png" alt=""> -->
+                </div>
+                <div id="bar1" onclick="nav()" class="bar"><i class="fas fa-align-right"></i></div>
+                <div id="menu" class="navbar">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="hero">
+            <div class="container">
+                <div class="text">
+                    <div class="hi"> <span>hi !</span> <div class="arrow"></div></div>
+                    
+                    <span id="hed">Front-End web developer</span>
+                   <div class="name">
+                       <span class="title1" >name</span>
+                       <span class="desc" >I'm Bariul</span>
+                   </div>
+                   <div class="name">
+                    <span class="title2" >dob</span>
+                    <span class="desc" >30-07-2001</span>
+                </div>
+                <div class="name">
+                    <span class="title3" >SKILL</span>
+                    <span class="desc" >HTML5, CSS3, JAVASCRIPT, WORDPRESS, PSD TO HTML</span>
+                </div>
+                <div class="name">
+                    <span class="title4" >ADDRESS</span>
+                    <span class="desc" >DHAKA, BANGLADESH</span>
+                </div>
+
+                </div>
+                <div class="image">
+                    <img src="https://fv2-1.failiem.lv/thumb_show.php?i=shuqgjn4x&view" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="service">
+        <div class="hed2">
+            <h1>My Service</h1>
+        </div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+       <div class="serviceListWrapper">
+        <div class="serviceList">
+            <div class="next">
+                <i class="fas fa-pen-square"></i>
+                <div class="nextDetails">
+                    <h1>Next level web design</h1>
+                    <p>Here are just a handful of ideas you can consider if you'd like to take your web designs the next level.let you know I will took great care and attention of even the smallest of things.</p>
+                </div>
+
+
+            </div>
+
+            <div class="responsive">
+                <i class="fas fa-cogs"></i>
+                <div class="nextDetails">
+                    <h1>responsive web design</h1>
+                    <p> we offer responsive design for new websites as opposed to mobile design because we believe that responsive websites provide a more unified experience that is more affordable, easier to use, and forward-compatible than other mobile solutions.</p>
+                </div>
+
+
+            </div>
+            
+        </div>
+
+        <div class="serviceList">
+            <div class="moboleFriendly">
+                <i class="fas fa-mobile"></i>
+                <div class="nextDetails">
+                    <h1>mobile Friendly</h1>
+                    <p>If you want your business to succeed, you need a mobile friendly website design. We at Web Brain InfoTech, offer Mobile Website Design & Development</p>
+                </div>
+
+
+            </div>
+            <div class="communication">
+                <i class="fas fa-phone-square-alt"></i>
+                <div class="nextDetails">
+                    <h1>responsive communication</h1>
+                    <p>I will able to talk with you as a friend. You can communicate with me as resposive and respectfully. I will work untill tou are 100% satisfied</p>
+                </div>
+
+
+            </div>
+        </div>
+       </div>
+    </section>
+    <script>
+        var show = document.getElementById("menu");
+menu.style.right = "-300px";
+function nav(){
+    if(menu.style.right == "-300px"){
+        menu.style.right = "0px";
+    }
+    else{
+        menu.style.right = "-300px";
+    }
+}
+    </script>
+</body>
+
+</html>
